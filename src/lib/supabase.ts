@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://cexsxfkbfrlnyloktwlt.supabase.co'
-const supabaseAnonKey = 'sb_publishable_69HJ6Tz3DpIeevS5ocXs-A_lMtYSxdw'
+// Agora o código busca as chaves de forma segura no ambiente onde está rodando
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
